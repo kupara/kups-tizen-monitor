@@ -16,9 +16,10 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'preview');
 const PORT = 18290;
 const UI = 18291;
-// Not in git (app/img/apps/ and brand-logo.png are .gitignored), so a fresh
-// checkout 404s on them and the app falls back to name tiles.
-const IGNORED_TV_ERRORS = /favicon\.ico|status of 404.*\/img\/(brand-logo\.png|apps\/)/;
+// Not in git (app/img/apps/, brand-logo.png and the macos-* wallpapers are
+// .gitignored), so a fresh checkout 404s on them; the app falls back to name
+// tiles and the other wallpapers.
+const IGNORED_TV_ERRORS = /favicon\.ico|status of 404.*\/(img\/(brand-logo\.png|apps\/)|wallpapers\/macos-)/;
 const K = { LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40, ENTER: 13, BACK: 27 };
 
 let pass = 0;
